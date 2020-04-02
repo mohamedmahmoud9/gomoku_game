@@ -65,48 +65,58 @@ class _TwoPlayerGameState extends State<TwoPlayerGame>
           Center(
             child: Padding(
               padding: const EdgeInsets.only(top: 50.0),
-              child: RichText(
-                text: TextSpan(children: [
-                  TextSpan(
-                    text: 'GO ',
-                    style: TextStyle(
-                      color: Colors.red,
-                      fontSize: 50.0,
-                      fontWeight: FontWeight.bold,
+              child: Container(
+                height: MediaQuery.of(context).size.height*0.1,
+                child: RichText(
+                  text: TextSpan(children: [
+                    TextSpan(
+                      text: 'GO ',
+                      style: TextStyle(
+                        color: Colors.red,
+                        fontSize: 50.0,
+                        fontWeight: FontWeight.bold,
+                      ),
                     ),
-                  ),
-                  TextSpan(
-                    text: 'MO ',
-                    style: TextStyle(
-                      color: Colors.blue,
-                      fontSize: 50.0,
-                      fontWeight: FontWeight.bold,
+                    TextSpan(
+                      text: 'MO ',
+                      style: TextStyle(
+                        color: Colors.blue,
+                        fontSize: 50.0,
+                        fontWeight: FontWeight.bold,
+                      ),
                     ),
-                  ),
-                  TextSpan(
-                    text: 'KU',
-                    style: TextStyle(
-                      color: Colors.green,
-                      fontSize: 50.0,
-                      fontWeight: FontWeight.bold,
+                    TextSpan(
+                      text: 'KU',
+                      style: TextStyle(
+                        color: Colors.green,
+                        fontSize: 50.0,
+                        fontWeight: FontWeight.bold,
+                      ),
                     ),
-                  ),
-                ]),
+                  ]),
+                ),
               ),
             ),
           ),
 
-          scoreBoard,
+          Container(
+            height: MediaQuery.of(context).size.height*.2,
+            child: scoreBoard),
           // SizedBox(
           //   height: 20,
           // ),
-          Stack(
-            children: <Widget>[
-              board,
-              winnerDisplay,
-            ],
+          Container(
+            height: MediaQuery.of(context).size.height*.5,
+            child: Stack(
+              children: <Widget>[
+                board,
+                winnerDisplay,
+              ],
+            ),
           ),
-          bottomBar,
+          Container(
+            height: MediaQuery.of(context).size.height*.1,
+            child: bottomBar),
         ],
       )),
     );
@@ -126,19 +136,23 @@ class _TwoPlayerGameState extends State<TwoPlayerGame>
   Widget get blackScore => Column(
         children: <Widget>[
           Chip(
-            label: Text(
-              'Black',
-              style: TextStyle(fontSize: 30, color: Colors.white),
+            label: FittedBox(
+                          child: Text(
+                'Black',
+                style: TextStyle(fontSize: 30, color: Colors.white),
+              ),
             ),
             backgroundColor: Colors.blue,
           ),
           Chip(
-            label: Text(
-              '$_blackWins',
-              style: TextStyle(
-                fontWeight: FontWeight.bold,
-                color: Colors.black,
-                fontSize: 20.0,
+            label: FittedBox(
+                          child: Text(
+                '$_blackWins',
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  color: Colors.black,
+                  fontSize: 20.0,
+                ),
               ),
             ),
           ),
@@ -148,19 +162,23 @@ class _TwoPlayerGameState extends State<TwoPlayerGame>
   Widget get whiteScore => Column(
         children: <Widget>[
           Chip(
-            label: Text(
-              'White',
-              style: TextStyle(fontSize: 30, color: Colors.white),
+            label: FittedBox(
+                          child: Text(
+                'White',
+                style: TextStyle(fontSize: 30, color: Colors.white),
+              ),
             ),
             backgroundColor: Colors.blue,
           ),
           Chip(
-            label: Text(
-              '$_whiteWins',
-              style: TextStyle(
-                  fontWeight: FontWeight.bold,
-                  color: Colors.black,
-                  fontSize: 20.0),
+            label: FittedBox(
+                          child: Text(
+                '$_whiteWins',
+                style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    color: Colors.black,
+                    fontSize: 20.0),
+              ),
             ),
           )
         ],
@@ -169,19 +187,23 @@ class _TwoPlayerGameState extends State<TwoPlayerGame>
   Widget get drawScore => Column(
         children: <Widget>[
           Chip(
-            label: Text(
-              'Draw',
-              style: TextStyle(fontSize: 30, color: Colors.white),
+            label: FittedBox(
+                          child: Text(
+                'Draw',
+                style: TextStyle(fontSize: 30, color: Colors.white),
+              ),
             ),
             backgroundColor: Colors.blue,
           ),
           Chip(
-            label: Text(
-              '$_draws',
-              style: TextStyle(
-                  fontWeight: FontWeight.bold,
-                  color: Colors.black,
-                  fontSize: 20.0),
+            label: FittedBox(
+                          child: Text(
+                '$_draws',
+                style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    color: Colors.black,
+                    fontSize: 20.0),
+              ),
             ),
           )
         ],
@@ -312,12 +334,14 @@ class _TwoPlayerGameState extends State<TwoPlayerGame>
               ),
               child: Padding(
                 padding: const EdgeInsets.all(8.0),
-                child: Text(
-                  '2 Players',
-                  style: TextStyle(
-                    fontSize: 14.0,
-                    // color: accentColor,
-                    fontWeight: FontWeight.bold,
+                child: FittedBox(
+                                  child: Text(
+                    '2 Players',
+                    style: TextStyle(
+                      fontSize: 14.0,
+                      // color: accentColor,
+                      fontWeight: FontWeight.bold,
+                    ),
                   ),
                 ),
               ),
