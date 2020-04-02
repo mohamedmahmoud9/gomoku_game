@@ -1,16 +1,9 @@
-# gomoku_game
+##  Gomoku Game
 
-A new Flutter project.
+#### gomoku implementation without AI
 
-## Getting Started
+<br>
 
-This project is a starting point for a Flutter application.
+<img src="screenshots/gamescreen.jpg" width="420" align="right" alt="Zebra Gomoku">
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+**Gomoku** is an abstract strategy board game also known as **Gobang** or **Five in a Row**, and it is traditionally played with Go pieces (black and white stones) on a go board with 15x15 cells; because once placed, pieces are not moved or removed from the board, gomoku may also be played as a paper and pencil game. The game is known in several countries under different names.
