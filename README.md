@@ -1,6 +1,6 @@
 ##  Gomoku Game
 
-#### gomoku implementation
+#### gomoku implementation without AI
 
 <br>
 
